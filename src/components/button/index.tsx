@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "theme/index";
+import { styled } from "../../theme";
 import { ButtonProps } from "./types";
 
 const StyledButton = styled.button<ButtonProps>`
@@ -45,10 +45,15 @@ const Button: React.FC<ButtonProps> = ({
   buttonType = "PRIMARY",
   name,
   disabled,
-  onClick
+  onClick,
+  onMouseDown,
+  onMouseEnter,
+  onMouseLeave,
+  style
 }) => {
   return (
     <StyledButton
+      style={style}
       className={className}
       name={name}
       size={size}
@@ -57,6 +62,9 @@ const Button: React.FC<ButtonProps> = ({
       fullWidth={fullWidth}
       disabled={disabled}
       onClick={onClick}
+      onMouseDown={onMouseDown}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       {children}
     </StyledButton>

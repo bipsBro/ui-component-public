@@ -15,7 +15,9 @@
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test": "jest -c jest.config.js",
+    "test:watch": "jest -c jest.config.js --watch"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -34,17 +36,24 @@
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "@babel/preset-typescript": "^7.6.0",
     "@storybook/addon-actions": "^5.2.1",
     "@storybook/addon-info": "^5.2.1",
     "@storybook/addon-links": "^5.2.1",
     "@storybook/addons": "^5.2.1",
     "@storybook/react": "^5.2.1",
+    "@testing-library/jest-dom": "^4.1.2",
+    "@testing-library/react": "^9.3.0",
     "@types/storybook__react": "^4.0.2",
     "@types/styled-components": "^4.1.19",
     "awesome-typescript-loader": "^5.2.1",
+    "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
     "jest": "^24.9.0",
     "react-docgen-typescript-loader": "^3.2.1",
+    "react-test-renderer": "^16.10.2",
     "ts-jest": "^24.1.0"
   }
 }
