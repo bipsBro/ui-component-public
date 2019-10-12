@@ -10,7 +10,6 @@ const Button: React.FC<ButtonProps> = ({ ...props }) => (
   </TestThemeProvider>
 );
 
-// @ts-ignore
 describe("Button functions", () => {
   let count = 0;
   const handleFunction = () => {
