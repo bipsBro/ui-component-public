@@ -1,38 +1,27 @@
 {
-  "name": "components",
+  "name": "userinfo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@types/jest": "^24.0.18",
-    "@types/node": "12.7.5",
-    "@types/react": "16.9.2",
-    "@types/react-dom": "16.9.0",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1",
-    "styled-components": "^4.3.2",
-    "typescript": "3.6.3"
+    "@types/jest": "24.0.22",
+    "@types/node": "12.12.7",
+    "@types/react": "16.9.11",
+    "@types/react-dom": "16.9.4",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-scripts": "3.2.0",
+    "styled-components": "^4.4.1",
+    "typescript": "3.7.2"
   },
   "scripts": {
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -c .storybook -o .out",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "jest -c jest.config.js",
-    "test:watch": "jest -c jest.config.js --watch",
-    "prettier": "prettier --write \"packages/**/*{js,json,ts,tsx}\""
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "eslintConfig": {
     "extends": "react-app"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{ts,js,tsx}": [
-      "yarn prettier",
-      "git add"
-    ]
   },
   "browserslist": {
     "production": [
@@ -47,27 +36,22 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.6.0",
-    "@babel/preset-env": "^7.6.3",
-    "@babel/preset-react": "^7.6.3",
-    "@babel/preset-typescript": "^7.6.0",
-    "@storybook/addon-actions": "^5.2.1",
-    "@storybook/addon-info": "^5.2.1",
-    "@storybook/addon-links": "^5.2.1",
-    "@storybook/addons": "^5.2.1",
-    "@storybook/react": "^5.2.1",
-    "@testing-library/jest-dom": "^4.1.2",
-    "@testing-library/react": "^9.3.0",
-    "@types/storybook__react": "^4.0.2",
-    "@types/styled-components": "^4.1.19",
-    "awesome-typescript-loader": "^5.2.1",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-typescript": "^7.7.2",
+    "@storybook/addon-actions": "^5.2.6",
+    "@storybook/addon-links": "^5.2.6",
+    "@storybook/addons": "^5.2.6",
+    "@storybook/react": "^5.2.6",
+    "@testing-library/jest-dom": "^4.2.3",
+    "@testing-library/react": "^9.3.2",
+    "@types/styled-components": "^4.4.0",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
-    "husky": "3.0.8",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
-    "prettier": "1.18.2",
-    "react-docgen-typescript-loader": "^3.2.1",
-    "react-test-renderer": "^16.10.2",
+    "jest-dom": "^4.0.0",
+    "react-test-renderer": "^16.11.0",
     "ts-jest": "^24.1.0"
   }
 }

@@ -7,12 +7,10 @@ module.exports = {
   transform: {
     "\\.(ts|tsx)$": "ts-jest"
   },
-  // globals: {
-  //   "ts-jest": {
-  //     babelConfig: true
-  //   }
-  // },
   testPathIgnorePatterns: ["/node_modules/"],
   moduleFileExtensions: ["ts", "tsx", "js", "json"],
-  setupFilesAfterEnv: ["<rootDir>/setup/setupTest.ts"]
+  setupFilesAfterEnv: ["<rootDir>/setup/setupTests.ts"],
+  moduleNameMapper: {
+    ".+\\.(svg|png|jpg)$": "identity-obj-proxy"
+  }
 };
